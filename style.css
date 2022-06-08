@@ -29,29 +29,18 @@ table tr td table {
 
 .popup-overlay {
   width: 500px;
-
-  overflow: hidden;
-
-  background: pink;
-
+  height: 500px;
+  overflow: auto;
+  background: rgb(251, 255, 246);
   box-shadow: 0 0 10px black;
-
   border-radius: 10px;
-
   position: absolute;
-
   top: 50%;
-
   left: 50%;
-
   transform: translate(-50%, -50%);
-
   z-index: 9999;
-
   padding: 10px;
-
   text-align: center;
-
   display: none;
 }
 
