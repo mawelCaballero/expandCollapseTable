@@ -1,0 +1,1916 @@
+﻿:root {
+    --main-bg-color: #0C539E;
+    --main-color-light: rgb(0,156,221);
+    --main-font-family: Calibri, "Segoe UI", Verdana, Arial, sans-serif;
+    --main-font-color: Black;
+    --main-font-size: 13px;
+    --main-h1-font-family: 'bebasregular';
+    --main-h1-font-size: 20px;
+    --main-h1-font-color: var(--main-bg-color);
+}
+
+@font-face {
+    font-family: 'bebasregular';
+    src: url('./Fonts/BebasRegular/bebas___-webfont.eot');
+    src: url('./Fonts/BebasRegular/bebas___-webfont.eot?#iefix') format('embedded-opentype'), url('./Fonts/BebasRegular/bebas___-webfont.woff') format('woff'), url('./Fonts/BebasRegular/bebas___-webfont.ttf') format('truetype'), url('./Fonts/BebasRegular/bebas___-webfont.svg#bebasregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, table {
+    font-family: Calibri, "Segoe UI", Verdana, Arial, sans-serif;
+    font-family: var(--main-font-family);
+    font-size: 13px;
+    font-size: var(--main-font-size);
+    color: Black;
+    color: var(--main-font-color);
+    text-decoration: none;
+    background: none;
+}
+
+h2, .subtitle, .BasketLabel {
+    /*   font-family : 'allerregular' ; */
+    font-size: 16px;
+    padding-right: 10px;
+    color: #0C539E; /*font-weight: bold;*/ /*display: block;*/
+    color: var(--main-bg-color);
+}
+
+/* End extra style */
+h3, .subsubtitle {
+    font-size: 12px;
+    color: #0C539E;
+    color: var(--main-bg-color);
+    font-weight: bold;
+}
+
+iframe {
+    border-right: gray 1px solid;
+    border-top: gray 1px solid;
+    border-left: gray 1px solid;
+    border-bottom: gray 1px solid;
+}
+
+h1 {
+    font-family: 'bebasregular';
+    font-family: var(--main-h1-font-family);
+    font-size: 20px;
+    font-size: var(--main-h1-font-size);
+    font-weight: lighter;
+    color: #0C539E;
+    color: var(--main-h1-font-color);
+    word-spacing: 3px;
+    text-transform: uppercase;
+}
+
+    h1 .highlight {
+        color: #2D88EF;
+    }
+
+.titlePage-italic {
+    font-size: 16px;
+    color: #0C539E;
+    color: var(--main-bg-color);
+    font-style: italic;
+}
+
+a.content-link:link, a.content-link:visited, a.content-link:active {
+    color: #666699;
+    text-decoration: none;
+}
+
+a.sidebar-icons:hover {
+}
+
+a.content-link:hover {
+    text-decoration: underline;
+}
+
+a.content-link-smallfont:link, a.content-link-smallfont:visited, a.content-link-smallfont:active {
+    font-size: 13px;
+    color: #666699;
+}
+
+a.content-link-smallfont:hover {
+    font-size: 13px;
+    background-color: Silver;
+}
+
+a.blueunderlinelink:link, a.blueunderlinelink:active, a.blueunderlinelink:hover, a.blueunderlinelink:visited {
+    color: blue;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+/* class for showing tip
+  on mouseover (hoover), the direct child span or div with class tooltip will be shown in a popup
+ */
+.tip {
+    text-decoration: none;
+    display: inline-block; /*display inline-block ensures that the element has a proper height and that the tooltip will be displayed just below, touching the tip.  */
+}
+
+    .tip:hover {
+        cursor: help;
+        position: relative;
+    }
+
+    .tip .tooltip {
+        display: none;
+    }
+
+    .tip:hover .tooltip {
+        position: absolute;
+        float: left;
+        display: block;
+        background: #f0f0f0 no-repeat 100% 5%;
+        border: #c0c0c0 1px dotted;
+        padding: 5px 20px 5px 5px;
+        z-index: 100;
+        left: 0px;
+        margin: 0px 10px 10px 10px;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+        .tip:hover .tooltip:empty {
+            display: none;
+        }
+
+.copyright {
+    font-size: 10px;
+    color: #0C539E;
+    color: var(--main-bg-color);
+    font-style: italic;
+}
+
+/* give options default white background.  This is needed for NtwObjDropDownList control which
+copies the background of the selected option to the dropdownlist itself.
+Without this specific, all the options would be inheriting the color from the dropdownlist.
+    Jan 27, 2022, Bart #20466: but do not set the selected item to white.  Problem for listbox, it will not show the selected listitem.
+*/
+select option:not(:checked) {
+    background-color: white;
+}
+
+fieldset {
+    -moz-border-radius-bottomleft: 7px;
+    -moz-border-radius-bottomright: 7px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+}
+
+/* added by Nico, works only for Internet Explorer */
+
+.verticaltext {
+    writing-mode: tb-rl; /*keep it, works for IE */
+    writing-mode: vertical-rl; /* vertical for newer browsers */
+    font-size: 16px;
+    filter: flipv fliph;
+    color: #0C539E;
+    color: var(--main-bg-color);
+    font-weight: bold;
+    text-align: center;
+}
+
+.verticaltextwithleftborder {
+    writing-mode: tb-rl; /*keep it, works for IE */
+    writing-mode: vertical-rl; /* vertical for newer browsers */
+    font-size: 16px;
+    filter: flipv fliph;
+    color: #0C539E;
+    color: var(--main-bg-color);
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-color: green;
+    border-top-style: solid;
+    border-top-width: 1.5pt;
+    border-right-style: solid;
+    border-right-width: 1.5pt;
+    border-bottom-style: solid;
+    border-bottom-width: 1.5pt;
+}
+
+.verticaltextwithrightborder {
+    font-size: 16px;
+    color: #0C539E;
+    color: var(--main-bg-color);
+    font-weight: bold;
+    text-align: center;
+    border-color: green;
+    border-top-style: solid;
+    border-top-width: 1.5pt;
+    border-right-style: solid;
+    border-right-width: 1.5pt;
+    border-bottom-style: solid;
+    border-bottom-width: 1.5pt;
+    height: 100%;
+}
+
+.small-text {
+    font-size: 12px;
+    color: Blue;
+}
+
+.notavailablereport {
+    color: #666699;
+}
+
+.leftframetext {
+    font-size: 10px;
+    color: #8080ff;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.errorLabel {
+    color: Red;
+    font-weight: bold;
+}
+
+.successInfoLabel {
+    color: Green;
+    font-weight: bold;
+}
+
+
+div.controlContainer {
+    margin: 15px 0 15px 0;
+}
+
+/* #14204 class to display an div (or any block element) inline-block, including hack for IE
+http://robertnyman.com/2010/02/24/css-display-inline-block-why-it-rocks-and-why-it-sucks/
+First use: TakeFromBasket control
+*/
+.DisplayInlineBlockWithIEHack {
+    display: inline-block;
+    vertical-align: top; /* For IE 7 */
+    zoom: 1;
+    *display: inline;
+}
+
+
+/* NtwObjGridView styles */
+/* Normal Grid*/
+/* see http://www.w3.org/TR/CSS2/cascade.html#specificity for rules priority */
+table.GridStyle, table.NtwObjPivotTableGridStyle {
+    white-space: nowrap;
+    width: auto;
+    background-color: #fff;
+    margin: 5px 0 10px 0;
+    border: solid 0px #0C539E;
+    border: solid 0px var(--main-bg-color);
+    border-collapse: collapse;
+}
+
+    table.GridStyle tr.active, table.NtwObjPivotTableGridStyle tr.active {
+        background-color: #EEEEEE;
+    }
+
+    table.GridStyle tr:hover, table.NtwObjPivotTableGridStyle tr:hover {
+        background-color: #EEEEEE;
+    }
+
+    table.GridStyle td, table.NtwObjPivotTableGridStyle td {
+        padding: 5px 5px 5px 5px;
+        color: #0C539E;
+        color: var(--main-bg-color);
+        font-weight: normal;
+        border-style: none;
+    }
+
+    table.GridStyle tr.GridStylePager {
+        color: #330099;
+    }
+
+        table.GridStyle tr.GridStylePager td {
+            border-style: none;
+            background: inherit;
+        }
+
+    table.GridStyle th, table.GridStyle tr.GridStyleHeader td, table.NtwObjPivotTableGridStyle td.rowlabelheader, table.NtwObjPivotTableGridStyle td.collabel, table.NtwObjPivotTableGridStyle td.totalcolheader {
+        padding: 4px 2px;
+        color: #0033AB;
+        border: none;
+        border-bottom-style: solid;
+        border-bottom-color: #6678B1;
+        border-bottom-width: 2px;
+        font-size: 0.9em;
+        text-align: left;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bolder;
+    }
+
+    table.GridStyle td.wrap {
+        white-space: normal;
+    }
+
+    table.GridStyle tr:hover th, table.GridStyle tr.GridStyleHeader:hover {
+        background-color: #fff;
+    }
+
+    table.GridStyle tr.GridStyleHeaderSort td, table.GridStyle th.GridStyleHeaderSort td {
+        padding: 4px 2px;
+        color: #0033AB;
+        border-bottom-style: solid;
+        border-bottom-color: #6678B1;
+        border-bottom-width: 2px;
+        font-size: 0.9em;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bolder;
+        border-left: solid 0px white;
+        border-right: solid 0px white;
+        border-top: solid 0px white;
+    }
+
+    table.GridStyle th.GridStyleHeaderNoSort td, table.GridStyle tr.GridStyleHeaderSort td, NtwObjPivotTableGridStyle TD.collabel {
+        padding: 4px 2px;
+        color: #0033AB;
+        border-bottom-style: solid;
+        border-bottom-color: #6678B1;
+        border-bottom-width: 2px;
+        font-size: 0.9em;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bolder;
+        border-left: solid 0px white;
+        border-right: solid 0px white;
+        border-top: solid 0px white;
+    }
+
+    table.GridStyle tr.GridSelectedStyleBody {
+        background: #FFCC66;
+        color: #663399;
+    }
+
+    table.GridStyle tr.GridStyleFooter {
+        background: #FFFFCC;
+        color: #330099;
+    }
+
+    table.NtwObjPivotTableGridStyle td.totals {
+        font-weight: bolder;
+    }
+/* style for equipment details*/
+tr.WarningRetiringWillRetireAlsoClients {
+    background-color: #FFFF95;
+}
+
+td.cssNotConnectedPorts {
+    background-color: #ADD8E6;
+}
+
+/* style for equipments grid*/
+
+.GridStyleEqt {
+    white-space: nowrap;
+    width: auto;
+    background-color: #fff;
+    margin: 5px 0 10px 0;
+    border: solid 0px #0C539E;
+    border: solid 0px var(--main-bg-color);
+    border-collapse: collapse;
+}
+
+    .GridStyleEqt td {
+        color: #0C539E;
+        color: var(--main-bg-color);
+        font-weight: normal;
+        padding: 5px 5px 5px 5px;
+    }
+
+.GridStyleHeaderEqt td {
+    padding: 4px 2px;
+    color: #0033AB;
+    border: none;
+    border-bottom: 2px solid #6678B1;
+    font-size: 0.9em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.GridStyleHeaderEqt th:hover {
+    background-color: #fff;
+}
+
+.GridStyleEqt tr.active {
+    background-color: #EEEEEE;
+}
+
+.GridStyleEqt tr:hover {
+    background-color: #EEEEEE;
+}
+
+.GridStyleBodyEqt {
+    background: #fff;
+    font-size: x-small;
+}
+
+.GridSelectedStyleBodyEqt {
+    background: #FFCC66;
+    color: #663399;
+    font-size: x-small;
+}
+
+.GridStyleFooterEqt {
+    background: Tan;
+    font-size: x-small;
+}
+
+.GridAlternatingStyleEqt {
+    background: #D2D6DA;
+    font-size: x-small;
+}
+
+/* style for statistics grid*/
+
+.GridStyleStats {
+    white-space: nowrap;
+    width: auto;
+    background-color: #fff;
+    margin: 5px 0 10px 0;
+    border-collapse: collapse;
+    border-style: none;
+}
+
+    .GridStyleStats tr:hover {
+        background-color: #EEEEEE;
+    }
+
+    .GridStyleStats tr.active {
+        background-color: #EEEEEE;
+    }
+
+    .GridStyleStats td {
+        padding: 5px 5px 5px 5px;
+        color: #0C539E;
+        color: var(--main-bg-color);
+        font-weight: normal;
+        border-style: none;
+    }
+
+    .GridStyleStats th {
+        padding: 4px 2px;
+        color: #0033AB;
+        border: none;
+        border-bottom: 2px solid #6678B1;
+        font-size: 0.9em;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bolder;
+    }
+
+.GridStylePagerStats {
+    background: #FFFFCC;
+    color: #330099;
+}
+
+.GridStyleHeaderStats td {
+    padding: 4px 2px;
+    color: #0033AB;
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: #6678B1;
+    border-bottom-width: 2px;
+    font-size: 0.9em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.GridStyleSearchCC td {
+    color: #0033AB;
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: #6678B1;
+    border-bottom-width: 1px;
+    text-decoration: none;
+}
+
+.GridStyleBodyStats {
+    padding: 5px 5px 5px 5px;
+    color: #0C539E;
+    color: var(--main-bg-color);
+    font-weight: normal;
+    border-style: none;
+}
+
+.GridSelectedStyleBodyStats {
+    background: #738A9C;
+    color: white;
+    font-weight: bold;
+}
+
+.GridStyleFooterStats {
+    background: #F7DFB5;
+    color: #8C4510;
+}
+
+.GridStyleSubtitle {
+    color: #330099;
+    font-size: 16px;
+    font-weight: bold;
+}
+/* style for grid ends here*/
+
+/* style for route table*/
+table.GridStyle tr.LcProtectionTypeMain {
+    background-color: #B3FFB3; /* very light green;*/
+}
+
+table.GridStyle tr.LcProtectionTypeSpare {
+    background-color: #FFDFDF; /* very light red */
+}
+
+table.GridStyle tr.LcProtectionTypeMainSpare {
+    background-color: #CECEFF; /* very light blue */
+}
+/* classes to Show or hide routing info */ .advanced, .expert {
+    display: none;
+}
+
+table.showexpert .expert, table.showexpert .advanced {
+    display: table-cell;
+}
+
+table.showadvanced .advanced {
+    display: table-cell;
+}
+
+table.showadvanced .expert {
+    display: none;
+}
+
+/* end style for route table*/
+
+/* Special stylesheet for link buttons with text enclosed within brackets. */
+.linkBracket {
+    background: url(../Images/Left_Brace.gif) left 1px no-repeat;
+}
+
+    .linkBracket a {
+        background: url(../Images/Right_Brace.gif) right 1px no-repeat;
+        color: Green;
+        text-decoration: underline;
+        padding: 0px 4px;
+        font-size: 11px;
+    }
+
+        .linkBracket a:hover {
+            background: url(../Images/Right_Brace.gif) right 1px no-repeat;
+            color: Green;
+            text-decoration: underline;
+            padding: 0 4px;
+            font-size: 11px;
+        }
+
+        .linkBracket a:visited {
+            color: Green;
+            text-decoration: underline;
+            padding: 0 4px;
+            font-size: 11px;
+        }
+
+.modalBackground {
+    background-color: Gray;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+
+.modalPopup {
+    background-color: White;
+    border: 0px;
+    padding: 3px;
+    width: inherit;
+}
+
+@media screen {
+    div.popup {
+        font-family: "Segoe UI", sans-serif;
+        font-size: 8;
+        z-index: 105;
+        background-image: none;
+        position: absolute;
+        background-color: #EEEEEE;
+        text-align: left;
+    }
+
+        div.popup table {
+            font-family: "Segoe UI", sans-serif;
+            font-size: 10px;
+            border-width: thin;
+            border-style: ridge;
+            text-align: left;
+            border-collapse: collapse;
+            background-color: #EEEEEE;
+        }
+}
+
+@media printer {
+    div.popup {
+        height: 1px;
+        width: 1px;
+        visibility: hidden;
+        z-index: 0;
+    }
+
+        div.popup table {
+            border-style: none;
+            visibility: hidden;
+        }
+}
+
+
+div.popup th {
+    font-size: 12;
+    text-align: left;
+    border: solid 1px #999999;
+}
+
+div.popup td {
+    font-size: 10;
+    font-style: italic;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.UsageDetailsGrid td {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border-style: none;
+    white-space: nowrap;
+}
+
+/* style for displaying custominfo datasource namevalues.  
+See ReportTemplates\GND\CustomInfoXml\CustomInfoXml2.ascx.vb */
+table.CustomInfoDataSourceTable {
+    border-collapse: collapse;
+    border-style: hidden;
+    white-space: nowrap;
+}
+
+    table.CustomInfoDataSourceTable td, table.CustomInfoDataSourceTable th {
+        border-right: solid thin Gray;
+        padding-right: 30px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+/* style for displaying CustomInfoXml data*/
+/*  popup*/
+div.custominfopopup {
+    position: absolute;
+    background-color: white;
+}
+
+td.CustomInfoXmlDoc {
+    position: relative;
+}
+
+    td.CustomInfoXmlDoc > div {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    td.CustomInfoXmlDoc:hover > div {
+        visibility: visible;
+        position: absolute;
+        left: 20px;
+        z-index: 100;
+        background-color: White;
+        box-shadow: 10px 10px 5px #888888;
+    }
+
+    td.CustomInfoXmlDoc.clicked > div {
+        visibility: visible;
+        position: inherit;
+        box-shadow: none;
+        left: auto;
+    }
+
+.TableCustomInfo {
+    border: 1px solid #943634;
+    color: #943634;
+    padding: 5px;
+    border-collapse: collapse;
+    white-space: nowrap; /* no wrapping*/
+}
+
+    /* cell borders*/
+    .TableCustomInfo th, .TableCustomInfo td {
+        border: 1px solid #943634;
+        border-collapse: collapse;
+    }
+
+    .TableCustomInfo th {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .TableCustomInfo .TD_Attributes {
+        vertical-align: top;
+        white-space: nowrap; /* no wrapping*/
+    }
+
+    .TableCustomInfo .TD_Contents {
+        width: 100%; /* sets contents cell to maxima width possible and other cells (attributes) minimal */
+        vertical-align: top;
+    }
+
+    .TableCustomInfo td span {
+        line-height: 16px;
+    }
+
+/*Style for formatting error page */
+.mail-text {
+    font-weight: bold;
+}
+
+.mail-subtitle {
+    font-size: 18px;
+    color: Red;
+    font-weight: bold;
+}
+
+.basix {
+    font-size: 12px;
+}
+
+.mail-header1 {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000099;
+}
+
+.mail-tlbbkground1 {
+    background-color: #000099;
+}
+
+/* coloring of table rows and cells by usage, status, ...*/
+tr[usage=notconnected], td[usage=notconnected] {
+    background-color: LightBlue;
+}
+
+tr[usage=empty], td[usage=empty] {
+    background-color: LightBlue;
+}
+
+/* styles for NtwObjPivotTableView report */
+
+TABLE.NtwObjPivotTableView {
+    border-color: #CC9966;
+    border-style: solid;
+    border-width: 2px;
+    padding: 4px;
+    white-space: nowrap;
+    border-collapse: collapse;
+}
+
+    TABLE.NtwObjPivotTableView tr {
+    }
+
+    TABLE.NtwObjPivotTableView td {
+        border-color: #CC9966;
+        border-style: solid;
+        border-width: 1px;
+    }
+
+        TABLE.NtwObjPivotTableView TD.rowlabelheader, TABLE.NtwObjPivotTableView TD.collabel, TABLE.NtwObjPivotTableView TD.totalcolheader {
+            background: #99ccff;
+            border-color: #CC9966;
+            border-style: solid;
+            border-width: 2px;
+            color: Blue;
+        }
+
+        TABLE.NtwObjPivotTableView TD.rowlabel {
+            text-align: left;
+        }
+
+        TABLE.NtwObjPivotTableView TD.totals, TABLE.NtwObjPivotTableView TD.totalcolheader {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        TABLE.NtwObjPivotTableView TD.aggrlabelempty {
+            background-color: #eeeeee;
+            text-align: center;
+        }
+
+        TABLE.NtwObjPivotTableView TD.aggrlabel {
+            background-color: yellow;
+            text-align: center;
+        }
+
+/* end style for NtwObjPivotTableView report */
+
+
+/* styles for Inventory report */
+
+TABLE.inventorytable {
+    font-size: 10px;
+    border-left-color: black;
+    border-bottom-color: black;
+    border-top-color: black;
+    border-collapse: collapse;
+    border-right-color: black;
+    border-width: thin;
+    padding: 0;
+}
+
+    TABLE.inventorytable tr {
+        height: 20px;
+        border-collapse: collapse;
+    }
+
+    TABLE.inventorytable td {
+        border-style: solid;
+        border-color: Black;
+        border-width: thin;
+        padding: 0;
+        margin: 10;
+        border-collapse: collapse;
+        border-right: 1px solid;
+        border-top: 1px solid;
+        border-left: 1px solid;
+        border-bottom: 1px solid;
+        white-space: nowrap;
+    }
+
+        TABLE.inventorytable TD.collabel DIV, TABLE.inventorytable TD.totalcolheader DIV {
+            text-align: left;
+            height: 180px;
+            vertical-align: top;
+            overflow: hidden;
+            writing-mode: tb-rl; /*keep it, works for IE */
+            writing-mode: vertical-rl; /* vertical for newer browsers */
+        }
+
+        TABLE.inventorytable TD.rowlabelheader {
+            text-align: left;
+        }
+
+        TABLE.inventorytable TD.totals, TABLE.inventorytable TD.totalcolheader {
+            font-weight: bold;
+            font-size: 11px;
+            background-color: #dddddd;
+            text-align: center;
+        }
+
+            TABLE.inventorytable TD.totals a {
+                color: Black;
+                text-decoration: none;
+            }
+
+        TABLE.inventorytable TD.aggrlabelempty {
+            background-color: #eeeeee;
+            text-align: center;
+        }
+
+        TABLE.inventorytable TD.aggrlabel {
+            background-color: #eeeeee;
+            text-align: center;
+        }
+
+            TABLE.inventorytable TD.aggrlabel a {
+                color: Black;
+                text-decoration: none;
+            }
+
+
+        TABLE.inventorytable TD.topcell {
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        TABLE.inventorytable TD.cell {
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+        }
+
+/* end style for inventory report */
+
+.ReportListTable {
+    border-color: #0C539E;
+    border-color: var(--main-bg-color);
+    border-bottom-style: solid;
+    border-bottom-width: 0pt;
+    border-left-style: none;
+    border-right-style: none;
+    width: 100%;
+}
+
+    .ReportListTable TH {
+        /*     color: White;     background-color: #0C539E; */
+        color: #0C539E;
+        color: var(--main-bg-color);
+        border-color: #0C539E;
+        border-color: var(--main-bg-color);
+        text-align: left;
+        font-weight: normal;
+        border-bottom-width: 1pt;
+        border-bottom-style: solid;
+    }
+
+/* style for IncidentSimulation grid*/
+
+.GridStyleHeaderIncSimulation {
+    background: Tan;
+    font-weight: bold;
+}
+
+.GridStyleBodyIncSimulation {
+    background-color: LightGoldenrodYellow;
+    color: Black;
+}
+
+.GridSelectedStyleBodyIncSimulation {
+    background: DarkSlateBlue;
+    color: GhostWhite;
+}
+
+.GridAlternatingStyleIncSimulation {
+    background: PaleGoldenrod;
+}
+
+.GridStyleIncSimulation {
+    border-color: Tan;
+    border-style: solid;
+    border-width: 1px;
+    padding: 2px;
+}
+
+    .GridStyleIncSimulation td {
+        border-color: Tan;
+        border-style: solid;
+        border-left-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 0px;
+        border-top-width: 0px;
+        padding: 2px;
+    }
+
+.GridStyleFooterIncSimulation {
+    background: Tan;
+}
+
+.GridStylePagerIncSimulation {
+    background: PaleGoldenrod;
+    color: DarkSlateBlue;
+}
+
+.ajax__combobox_textboxcontainer input {
+    border-right: 0px none;
+    font-family: "Segoe UI", Verdana;
+    float: none;
+}
+
+/* style for grid ends here*/
+
+/* style for traildetails page usage grid*/
+tr.srvprotspare td {
+    background-color: silver;
+}
+/* style for confirmation popup*/
+
+.PopupOverlayDiv {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #DCDCDC;
+    opacity: 0.80; /*for all browsers*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /*for IE8*/
+    filter: alpha(opacity=80); /*for IE5-7*/
+    *position: absolute;
+    *z-index: -1;
+}
+
+.OverlayContent {
+    z-index: 101;
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    padding: 20px 10px 10px 10px;
+    background-color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    visibility: hidden;
+    *position: absolute;
+}
+
+.ConfirmationControlDiv {
+    padding: 40px 10px 10px 10px;
+    text-align: right;
+}
+
+.DottedBorderContainer {
+    border-style: dotted;
+    border-width: 1px;
+    padding: 5px 5px 5px 5px;
+}
+
+.footer-text {
+    font-family: "Segoe UI", Verdana;
+    font-size: xx-small;
+}
+
+.hyperlink_notextdeco {
+    color: #0C539E;
+    color: var(--main-bg-color);
+    text-decoration: none;
+}
+
+/* hyperlinks to typedetails pages.  Do style as hyperlink, otherwise too many links in a page*/
+a.hyperlink_phitemtype, td.hyperlink_phitemtype a, a[href*="PhitemTypeDetails.aspx" i] {
+    color: #0C539E;
+    color: var(--main-bg-color);
+    text-decoration: none;
+}
+
+a.hyperlink_equipmenttype, td.hyperlink_equipmenttype a, a[href*="EquipmentTypeDetails.aspx" i] {
+    color: #0C539E;
+    color: var(--main-bg-color);
+    text-decoration: none;
+}
+
+a.hyperlink_capacity, td.hyperlink_capacity a, a[href*="CapacityDetails.aspx" i] {
+    color: #0C539E;
+    color: var(--main-bg-color);
+    text-decoration: none;
+}
+
+.hyperlink_layer, a[href*="LayerDetails.aspx" i] {
+    color: #0C539E;
+    color: var(--main-bg-color);
+    text-decoration: none;
+}
+
+a.hyperlink_servicetype, td.hyperlink_servicetype a, a[href*="ServiceTypeDetails.aspx" i] {
+    color: #0C539E;
+    color: var(--main-bg-color);
+    text-decoration: none;
+}
+
+a[href*="SncTypedetails.aspx" i] {
+    color: #0C539E;
+    color: var(--main-bg-color);
+    text-decoration: none;
+}
+
+a[href*="SubnetworkTypeDetails.aspx" i] {
+    color: #0C539E;
+    color: var(--main-bg-color);
+    text-decoration: none;
+}
+
+a[href*="DatasourceTypeDetails.aspx" i] {
+    color: #0C539E;
+    color: var(--main-bg-color);
+    text-decoration: none;
+}
+
+a[href*="search.aspx?" i] {
+    text-decoration: underline dashed;
+    color: var(--main-bg-color);
+}
+a[href*="/api.svc/" i] {
+    text-decoration: underline overline;
+    color: var(--main-bg-color);
+}
+/**/
+
+/* ------------------------- */
+/* RingContents table layout */
+/* ------------------------- */
+table.ringtable {
+    text-align: center;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-style: ridge;
+    border-color: black;
+}
+
+    table.ringtable tr {
+        height: 20px;
+        border-collapse: collapse;
+    }
+
+    table.ringtable td {
+        border-collapse: collapse;
+    }
+
+    table.ringtable tr.ringtableheaderrow {
+        background: Goldenrod;
+        border-width: 1px;
+        border-style: ridge;
+        border-color: black;
+        border-collapse: collapse;
+    }
+
+    table.ringtable tr.ringtableevenrow {
+        background: LightGoldenrodYellow;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    table.ringtable tr.ringtableoddrow {
+        background: LightGoldenrodYellow;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    table.ringtable th.ne {
+        border-style: ridge;
+        border-color: Black;
+        border-width: 1px;
+        height: 150px;
+        overflow: hidden;
+        text-align: center;
+        vertical-align: middle;
+        border-collapse: collapse;
+    }
+
+        table.ringtable th.ne * {
+            writing-mode: tb-rl; /*keep it, works for IE */
+            writing-mode: vertical-rl; /* vertical for newer browsers */
+            border-collapse: collapse;
+        }
+
+    table.ringtable td {
+        white-space: nowrap;
+        text-align: center;
+        border-style: ridge;
+        border-color: Black;
+        border-width: 1px;
+        padding: 0px;
+        margin: 0px;
+        border-collapse: collapse;
+    }
+
+    table.ringtable a:link {
+        color: black;
+        text-decoration: none;
+    }
+
+    table.ringtable a:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+    table.ringtable a:hover {
+        color: Black;
+        text-decoration: none;
+        background: none;
+    }
+    /* RingContents NE crossconnect table*/
+    table.ringtable table.ne {
+        font-size: 8px;
+        border-collapse: collapse;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+    }
+
+/* Ringcontents legend table*/
+table.tableoflegends {
+    text-align: center;
+    border-collapse: collapse;
+}
+
+    table.tableoflegends tr {
+        height: 20px;
+        border-collapse: collapse;
+    }
+
+    table.tableoflegends td {
+        white-space: nowrap;
+        text-align: center;
+        border-style: ridge;
+        border-color: Black;
+        border-width: 1px;
+        padding: 0px;
+        margin: 0px;
+        border-collapse: collapse;
+    }
+
+/* End RingContents Legend Table*/
+/* End RingContents */
+
+/*Table representation as DIV*/
+.divHeaderTable {
+    width: 100%;
+    padding-bottom: 5px;
+    display: block;
+}
+
+.divHeaderRow {
+    width: 100%; /* add extra that you want to for header column */
+    display: block;
+    height: 105px;
+}
+
+.divHeaderColumn {
+    float: left;
+    width: 33%;
+    display: block;
+}
+
+.divTable {
+    width: 98%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: table;
+}
+
+.divRow {
+    width: 97%;
+    display: table-row;
+}
+
+* html .divColumnLabel {
+    float: left;
+    display: table-column;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.divColumnLabel {
+    float: left;
+    display: table-column;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    min-width: 10%;
+    text-align: right;
+}
+
+* html .divColumnContent {
+    float: left;
+    display: table-column;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.divColumnContent {
+    float: left;
+    display: table-column;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    min-width: 20%;
+    text-align: left;
+}
+/*End Table representation as DIV*/
+
+/* added by Joppe */
+p.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Start button styling */
+/* common part for all buttons (submit, button, image)*/
+input[type=submit], input[type=button], input[type=image] {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    overflow: visible;
+    vertical-align: middle;
+}
+
+    input[type=submit]:disabled, input[type=button]:disabled, input[type=image]:disabled {
+        cursor: default;
+    }
+
+/* text buttons specific */
+input[type=submit], input[type=button] {
+    font-family: 'bebasregular';
+    word-spacing: 3px;
+    text-decoration: none;
+    border: 0px #E3E4E4 solid;
+    padding: 5px 20px;
+    margin: 5px 10px 5px 10px;
+    color: #fff !important;
+    background: #0C539E;
+    background: var(--main-bg-color);
+    min-width: 50px;
+}
+
+    input[type=submit]:disabled, input[type=button]:disabled {
+        background: #E3E4E4;
+    }
+
+    input[type=submit]:hover, input[type=button]:hover {
+        background: #66B3FF;
+    }
+
+    input[type=submit]:disabled:hover, input[type=button]:disabled:hover {
+        background: #E3E4E4;
+    }
+
+    input[type=submit]:active, input[type=button]:active {
+        background: #3399FF;
+        top: 2px;
+        left: 2px;
+    }
+
+/* image button*/
+input[type=image] {
+    margin: 5px 10px 5px 10px;
+}
+
+    input[type=image]:disabled {
+        /*  nothing specific  */
+    }
+
+/*         End button styling       */
+
+/* Style for textboxes (singleline) */
+input[type=text], input[type=password] {
+    position: relative;
+    background: #fff;
+    border: 1px #d2d2d2 solid;
+    color: #646464;
+    font-size: 10pt;
+    padding: 5px 8px;
+    width: auto;
+    outline: 0;
+    display: inline-block;
+}
+
+    input[type=text]:focus, input[type=password]:focus {
+        background: #fff;
+        border-color: #d2d2d2;
+        color: #000;
+    }
+
+    input[type=text]:active, input[type=password]:active {
+        border: 1px #d2d2d2 solid;
+    }
+/* definitions for MENU */
+div.menu, div.menu div {
+    padding: 0;
+    margin: 0;
+    background-color: White; /*needed for IE6 - transparent causes menu to close if mouse does not hover menu text*/
+    text-align: left;
+}
+
+    div.menu div {
+        float: left;
+        background-color: #0C539E;
+        background-color: var(--main-bg-color);
+    }
+
+        div.menu div a {
+            display: block; /* block: each a is displayed on a new line (default is inline)*/
+            text-decoration: none;
+            font-weight: bold;
+            color: White;
+            padding: 5px;
+        }
+
+        div.menu div div a {
+            color: #0C539E;
+            color: var(--main-bg-color);
+            font-weight: normal;
+            padding: 5px;
+        }
+
+        div.menu div div {
+            position: absolute;
+            width: auto;
+            visibility: hidden;
+            background-color: White;
+            border-style: solid;
+            border-width: 1px;
+            border-color: Gray;
+            font-weight: normal;
+            z-index: 9; /*needed to fix #15790, the menu div was displayed below footer*/
+        }
+
+        div.menu div:hover div {
+            visibility: visible;
+        }
+
+.contextMenu {
+    /* define style for context menus */
+}
+/* definitions for MENU END*/
+/* definitions for MENU END*/
+
+/*definitions for Super status START*/
+.cssSuperStatusPlanning {
+    background-color: #90EE90;
+}
+
+.cssSuperStatusWorking {
+}
+
+.cssSuperStatusRetiring {
+    background-color: LightSalmon; /*font-style: italic;*/
+}
+
+.cssReserved {
+    background-color: Orange;
+}
+/*definitions for Super status END*/
+
+/*definitions for Service status START
+ After css SuperStatus, in case of conflict, service status wins*/
+
+.cssServiceStatusMinor {
+    background-color: rgb(219, 175, 69);
+}
+
+.cssServiceStatusWarning {
+    background-color: Orange;
+}
+
+.cssServiceStatusMajor {
+    background-color: Red;
+}
+/*definitions for Service status END*/
+
+
+/* style for SearchCC */
+
+.GridStyleSearchCC {
+    border-bottom-style: solid;
+    border-bottom-color: #6678B1;
+    border-bottom-width: 1px;
+}
+
+/* style for Basic Search*/
+.BasicSearch {
+    border-collapse: collapse;
+    background-color: var(--main-color-light);
+}
+
+table.BasicSearch td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    white-space: nowrap;
+}
+
+.InfrabelBasicSearch {
+    background-color: #27b8ef;
+    font-size: medium;
+}
+
+.EnetBasicSearch {
+    background-color: #0f8fa2;
+}
+
+.EurofiberBasicSearch {
+    background-color: #2D899D;
+    font-size: smaller;
+}
+
+.TelenetBasicSearch {
+    background-color: Orange;
+}
+
+/* end of BasicSearch styles*/
+
+.TelenetStartPageSection_bottom td {
+    border-bottom-style: solid;
+    border-bottom-color: Gray;
+    border-bottom-width: 2px;
+}
+
+.TelenetStartPageSection_top_and_bottom td {
+    border-bottom-style: solid;
+    border-bottom-color: Gray;
+    border-bottom-width: 2px;
+    border-top-style: solid;
+    border-top-color: Gray;
+    border-top-width: 2px;
+    background-color: White;
+}
+
+.TelenetStartPageSection_top_and_bottom th {
+    border-bottom-style: solid;
+    border-bottom-color: Gray;
+    border-bottom-width: 2px;
+    border-top-style: solid;
+    border-top-color: Gray;
+    border-top-width: 2px;
+    background-color: #DDDDDD;
+}
+
+.TelenetStartPageSection_top th {
+    border-top-style: solid;
+    border-top-color: Gray;
+    border-top-width: 2px;
+    background-color: White;
+}
+
+.TelenetStartPageSection_top td {
+    border-top-style: solid;
+    border-top-color: Gray;
+    border-top-width: 2px;
+    background-color: White;
+}
+
+
+.TelenetStartPageSection_left {
+    border-left-style: solid;
+    border-left-color: Gray;
+    border-left-width: 2px;
+    background-color: White;
+}
+
+.TelenetStartPageSection_right {
+    border-right-style: solid;
+    border-right-color: Gray;
+    border-right-width: 2px;
+    background-color: White;
+}
+
+.TelenetStartPageSection_left_and_right {
+    border-left-style: solid;
+    border-left-color: Gray;
+    border-left-width: 2px;
+    border-right-style: solid;
+    border-right-color: Gray;
+    border-right-width: 2px;
+    background-color: White;
+}
+
+.TelenetStartPageReportListTable {
+    border-color: #0C539E;
+    border-color: var(--main-bg-color);
+    border-bottom-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    width: 100%;
+    background-color: Orange;
+    border-collapse: collapse;
+}
+
+.TelenetStartPageCaption {
+    background-color: White;
+}
+
+.TelenetBasicSearch input[type=text] {
+    color: Orange;
+    background-color: White;
+}
+
+.TelenetBasicSearch textarea {
+    color: Orange;
+    background-color: White;
+}
+
+.TelenetBasicSearch input[type=text]:focus {
+    color: Orange;
+    background-color: White;
+}
+
+.TelenetBasicSearch textarea:focus {
+    color: Orange;
+    background-color: White;
+}
+
+
+/* End of style for Telenet new start page */
+
+
+/* style for EPT new start page */
+
+.EPTBasicSearch {
+    border-collapse: collapse;
+    background-color: White;
+}
+
+    .EPTBasicSearch td {
+        height: 50px;
+        font-size: medium;
+    }
+
+.EPTStartPageSection_bottom td {
+    border-bottom-style: solid;
+    border-bottom-color: Gray;
+    border-bottom-width: 2px;
+}
+
+.EPTStartPageSection_top_and_bottom td {
+    border-bottom-style: solid;
+    border-bottom-color: Gray;
+    border-bottom-width: 2px;
+    border-top-style: solid;
+    border-top-color: Gray;
+    border-top-width: 2px;
+    background-color: White;
+}
+
+.EPTStartPageSection_top_and_bottom th {
+    border-bottom-style: solid;
+    border-bottom-color: Gray;
+    border-bottom-width: 2px;
+    border-top-style: solid;
+    border-top-color: Gray;
+    border-top-width: 2px;
+    background-color: #DDDDDD;
+}
+
+.EPTStartPageSection_top th {
+    border-top-style: solid;
+    border-top-color: Gray;
+    border-top-width: 2px;
+    background-color: White;
+}
+
+.EPTStartPageSection_top td {
+    border-top-style: solid;
+    border-top-color: Gray;
+    border-top-width: 2px;
+    background-color: White;
+}
+
+
+.EPTStartPageSection_left {
+    border-left-style: solid;
+    border-left-color: Gray;
+    border-left-width: 2px;
+    background-color: White;
+}
+
+.EPTStartPageSection_right {
+    border-right-style: solid;
+    border-right-color: Gray;
+    border-right-width: 2px;
+    background-color: White;
+}
+
+.EPTStartPageSection_left_and_right {
+    border-left-style: solid;
+    border-left-color: Gray;
+    border-left-width: 2px;
+    border-right-style: solid;
+    border-right-color: Gray;
+    border-right-width: 2px;
+    background-color: White;
+}
+
+.EPTStartPageReportListTable {
+    border-color: #0C539E;
+    border-color: var(--main-bg-color);
+    border-bottom-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    width: 100%;
+    background-color: #FFF200;
+    border-collapse: collapse;
+}
+
+.EPTStartPageCaption {
+    background-color: White;
+}
+
+.EPTBasicSearch input[type=text] {
+    color: #FFF200;
+    background-color: White;
+}
+
+.EPTBasicSearch textarea {
+    color: #FFF200;
+    background-color: White;
+}
+
+.EPTBasicSearch input[type=text]:focus {
+    color: #FFF200;
+    background-color: White;
+}
+
+.EPTBasicSearch textarea:focus {
+    color: #FFF200;
+    background-color: White;
+}
+
+/* End of style for EPT new start page */
+
+
+/*from Masterpage*/
+.MainContent {
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    padding-left: 10px;
+    width: 94%;
+    background: white;
+    border-left: solid 2px #0C539E;
+    border-left: solid 2px var(--main-bg-color);
+}
+/*from Content2Masterpage */
+.module_style_light, .module_style_dark {
+    color: #FFFFFF;
+    vertical-align: middle;
+    text-align: center;
+    word-spacing: 3px;
+}
+
+
+.module_style_light {
+    background-color: rgb(0,156,221);
+    background-color: var(--main-color-light);
+}
+
+.module_style_dark {
+    background-color: #0C539E;
+    background-color: var(--main-bg-color);
+}
+/* end C2M */
+
+/* BasketIcon */
+.BasketIconDiv {
+}
+
+.BasketText {
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 30px;
+    color: var(--main-font-color);
+    transform: translate(-50%, -50%);
+}
+/* EOBasketIcon */
+
+.main_global_banner, .main_page_message {
+    text-align: center;
+    z-index: 999;
+    padding: 30px 20px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.main_page_message {
+    font-size: 12pt;
+    width: 50%;
+}
+
+    .main_page_message.message_success {
+        color: #5bb700;
+        border-color: #5bb700;
+        background-color: #bbff77;
+    }
+
+    .main_page_message.message_info {
+        color: #0C539E;
+        border-color: #0C539E;
+        background-color: #9fbee3
+    }
+
+.main_global_banner {
+    font-size: 18pt;
+    position: fixed;
+    bottom: 5px;
+    right: 10%;
+    left: 10%;
+    color: #0C539E;
+    border-color: #0C539E;
+    background-color: #9fbee3
+}
+
+.user_details_form input[type=text], .user_details_form input[type=password], .user_details_form select {
+    box-sizing: border-box;
+    min-width: 300px;
+}
+
+div.frontview {
+    border: 1px solid transparent;
+}
+
+    div.frontview:hover {
+        border: 1px solid yellow;
+    }
+
+div.frontview_coloredbox_free {
+    background-color: #ADD8E6;
+    opacity: 0.4;
+}
+
+div.frontview_coloredbox_inuse {
+    background-color: red;
+    opacity: 0.4;
+}
+
+div.frontview_coloredbox_connected {
+    background-color: orange;
+    opacity: 0.4;
+}
+
+div.frontview_coloredbox_unknown {
+    background-color: grey;
+    opacity: 0.4;
+}
+
+div.frontview_coloredbox_noports {
+    background-color: brown;
+    opacity: 0.4;
+}
+
+table.frontview_legend {
+    border-collapse: collapse;
+}
+
+/* AutoCompleteExtender */
+
+.completionlist {
+    z-index: 201;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    width: auto;
+}
+
+.completionlistitem {
+    color: grey;
+    background-color: white;
+    z-index: 201;
+    overflow-x: hidden;
+}
+
+.completionlisthighlighteditem {
+    color: white;
+    background-color: grey;
+    z-index: 201;
+    overflow-x: hidden;
+}
+
+/* End of AutoCompleteExtender */
+
+/* from traildetails to show trail popup with info on endpoints*/
+/* normal: hidden */
+.hideEndPoints {
+}
+
+    .hideEndPoints .TrailWithEndPoints table.EndPointsGrid {
+        display: none;
+        transition: all;
+        transition-duration: 1s;
+        transition-delay: 1s;
+    }
+
+    /* hover, show as popup*/
+    .hideEndPoints .TrailWithEndPoints:hover {
+        position: relative;
+    }
+
+        .hideEndPoints .TrailWithEndPoints:hover table.EndPointsGrid {
+            position: absolute;
+            float: left;
+            display: block;
+            background: #f0f0f0 no-repeat 100% 5%;
+            border: #c0c0c0 1px dotted;
+            padding: 5px 20px 5px 5px;
+            z-index: 100;
+            left: 0px;
+            margin: 0px 20px 10px 10px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+/* when a parent element has class showEndPoints, show all */
+.showEndPoints table.EndPointsGrid {
+    display: block;
+}
+
+    .showEndPoints table.EndPointsGrid tr.EndPoint {
+        display: inherit;
+    }
+
+    .showEndPoints table.EndPointsGrid tr {
+        display: none;
+    }
