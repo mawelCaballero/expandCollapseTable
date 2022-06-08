@@ -1,0 +1,28 @@
+div {
+  width: 100%;
+  font-family: "Roboto";
+  font-weight: 400;
+  height: 100%;
+}
+
+.collapse {
+  width: 5px;
+  background-color: gray;
+}
+
+thead {
+  background-color: gray;
+  font-size: larger;
+}
+
+tr:hover {
+  background-color: lightgray;
+}
+
+table {
+  border: 1px solid black;
+  width: 100%;
+}
+table tr td table {
+  border: 1px solid gray;
+}
