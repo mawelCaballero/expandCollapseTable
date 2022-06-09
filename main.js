@@ -2,6 +2,20 @@ $(document).ready(function () {
   // Once page is loaded, hide the nested tables and show the first table
   $("table table").hide();
 
+  $("td[colspan='9']").each(function () {
+    // var tr = $(this).parents().filter("tbody").children().first();
+    // var firstTd = tr.children().first();
+    var currentTr = $(this).parent();
+    var firstTr = currentTr.prev();
+    var tdCollapsable = firstTr.children().first();
+    tdCollapsable.addClass("collapse");
+
+    tdCollapsable
+      .first()
+      .append(
+        ' <i class="fa fa-angle-down" data-toggle="collapse" href="#collapse1"  class="collapsed"   aria-expanded="false"  ></i>'
+      );
+  });
   // When checkbox is clicked, show all the nested tables, otherwise hide them
   $('input[type="checkbox"]').click(function () {
     $(this).is(":checked")
@@ -35,7 +49,6 @@ $(document).ready(function () {
       }
     },
     function () {
-      console.log("Leave");
       $(".popup-overlay").hide();
     }
   );
